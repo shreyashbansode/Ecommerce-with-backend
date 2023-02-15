@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,300&family=Secular+One&display=swap");
+
+/* ------------------------------------------------ NAVBAR ------------------------------------------------------- */
+
+.navbar {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+.navbar-img {
+  height: 100%;
+  width: 10%;
+}
+
+.navbar-img img {
+  height: 150px;
+  width: 150px;
+  padding-left: 20px;
+}
+
+.navbar-content {
+  height: 150px;
+  width: 100%;
+  /* padding: 30px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search input {
+  width: 30rem;
+  /* border: none; */
+  /* background: none; */
+}
+
+.search nav button {
+  padding-left: 40px;
+}
+
+.btn {
+  display: flex;
+  gap: 40px;
+  z-index: 999;
+  border: none;
+  /* border-style: none; */
+}
+
+.btn button {
+  border: none;
+  background: none;
+}
+.btn_count{
+  position: absolute;
+  width: 10px;
+  right: 7%;
+  top: 37%;
+  background-color: rgb(236, 168, 194);
+  border-radius: 20%;
+  z-index: -999;
+}
+/* -----------------------------------------------------flashCard------------------------------------------ */
+
+.flash-card {
+  height: 450px;
+  width: 100%;
+  background-image: url(./../../../public/Images/b1.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.flash-card-txt {
+  position: absolute;
+  left: 150px;
+  top: 40%;
+}
+
+.flash-card-txt h3 {
+  font-size: 40px;
+  color: rgb(212, 154, 186);
+}
+
+.flash-card-txt h2 {
+  font-weight: bold;
+}
+.flash-card-txt h5 {
+  font-weight: bold;
+  color: rgb(128, 128, 128);
+}
+
+/* ----------------------------------------------------Category------------------------------- */
+
+.category {
+  height: 200px;
+  width: 100%;
+  margin-top: 20px;
+  /* background-color:black */
+}
+
+.category-bx {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* ----------------------------------------------------Product------------------------------- */
+
+.product {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: auto;
+}
+
+.product-bx {
+  margin: 40px;
+  height: 300px;
+  /* border: 1px solid black; */
+}
+
+.pr-img {
+  height: 160px;
+  display: flex;
+  justify-content: center;
+}
+
+.pr-img img {
+  height: 150px;
+}
+
+.pr-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.product-bx:hover {
+  transform: translate(10px, 10px);
+  box-shadow: 0px 0px 1px 0px black;
+}
+
+/* ---------------------------------------------------------------pDetails - ---------------------------------------- */
+
+.product-box {
+  height: 100%;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+
+}
+
+.product-img {
+  height: 30rem;
+  width: 40rem;
+  padding: 20px;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.product_info{
+  height: 150px;
+  width: 50%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.product_info span{
+  padding:10px 22px;
+
+}
+
+.product-img img {
+  height: 28rem;
+  width: 30rem;
+}
+
+.cart_btn {
+  width: 50%;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+
+}
+.cart_btn button{
+  /* padding-top: 20px; */
+  width: 50px;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 20px 20px 20px 20px;
+
+}
+
+
+.cart_btn button {
+  width: 8rem;
+  border: none;
+  background: none;
+}
+
+
+.cart_btn button:hover {
+  background-color: pink;
+}
+
+
+
+
+/* ---------------------------------------------------------Cart------------------------------------------------ */
+
+
+
+.navbar{
+ height: 100%;
+ width: 100%;
+}
+
+
+.cart{
+  height: 90vh;
+  width: 100%;
+}
+
+.cart img{
+  height: 100px;
+  width: 100px;
+}
+
+
+.cartItem{
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
+}
+.cartItem_bx{
+
+  height: 150px;
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  justify-content: center;
+  align-items: center;
+ padding: 0 1rem;
+  border: 1px solid black;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.cartItem button{
+  height: 50px;
+  width: 150px;
+  border: none;
+  background-color: rgba(233, 165, 177, 0.427);
+  border-radius: 10px 10px 10px 10px;
+
+}

@@ -1,0 +1,130 @@
+.seller-dash {
+  height: 100%;
+  width: 100%;
+}
+
+.seller-content {
+  height: 100%;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  height: 100px;
+}
+
+.slider {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.slider-img {
+  width: 100%;
+  height: 100%;
+}
+.slider-img img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: right;
+}
+
+.product {
+  width: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+
+.product-bx {
+  margin: 40px;
+  height: 300px;
+  /* border: 1px solid black; */
+}
+
+.pr-img {
+  height: 160px;
+  display: flex;
+  justify-content: center;
+}
+
+.pr-img img {
+  height: 150px;
+}
+
+.pr-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.product-bx:hover {
+  transform: translate(10px, 10px);
+  box-shadow: 0px 0px 1px 0px black;
+}
+
+/* ------------------------------------Pdetails ----------------------------- */
+
+.pdetails {
+  height: 79vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content {
+  height: 200px;
+  width: 100%;
+}
+
+.content p {
+  font-size: 100px;
+  animation: hii ease 4s infinite;
+}
+
+@keyframes hii {
+  0%,
+  100% {
+    transform: translateX(-70px);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+}
+.details {
+  height: 600px;
+  width: 80%;
+  margin-top: 100px;
+  text-align: left;
+}
+
+.option {
+  height: 50px;
+  width: 100%;
+  border-radius: px 100px;
+}
+.option select {
+  height: 40px;
+  width: 38.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.185);
+}
+
+.addproduct button {
+  height: 40px;
+  width: 200px;
+  border: none;
+}
+
+.addproduct button:hover {
+  transition: 0.5s;
+  background-color: pink;
+}

@@ -1,0 +1,22 @@
+
+.footer{
+    height: 140px;
+    background-color:rgb(46, 44, 44)
+}
+.cardImg{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.footer-cpright{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding-top: 25px;
+    color: white;
+    opacity: 0.6;
+}
+
