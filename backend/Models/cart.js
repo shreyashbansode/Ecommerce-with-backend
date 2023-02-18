@@ -4,12 +4,15 @@ const mongoose = require('mongoose')
 
 
 const userSchema = new mongoose.Schema({
-    pID: {type: String, required: true},
+    pid:String,
+    uid: String,
+    Name: String,
+    Price: Number,
     quantity: {
         type: Number,
         default: 1
     },
-    
+
 })
 
 

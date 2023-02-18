@@ -22,7 +22,7 @@ exports.createuser = async (req, res) => {
 
 
 
-exports.getUser = async (req, res) => {
+exports.getallUser = async (req, res) => {
 
 
 
@@ -35,4 +35,19 @@ exports.getUser = async (req, res) => {
     catch (err) {
         res.json(err)
     }
+}
+
+
+exports.getUser = async (req, res) => {
+
+
+    try {
+        const getuser = await models.find({ _id: req.params.id });
+        res.json(getuser);
+
+    }
+    catch (err) {
+        res.json(err);
+    }
+
 }
