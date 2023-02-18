@@ -1,25 +1,34 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 const NavBar = (props) => {
 
-    const[data,setData]=useState([]);
+    const [data, setData] = useState([]);
 
-    useEffect(()=>{
-            axios.get("http://localhost:1031/product/get")
-            .then((res)=>{
-                    const data = res.data;
-                    setData(data);
+    const uid = props.id;
+    const pid = props.pid;
+
+    console.log(props);
+
+    console.log(pid)
+
+
+
+    useEffect(() => {
+        axios.get("http://localhost:1031/cart/get")
+            .then((res) => {
+                const data = res.data;
+                setData(data);
 
             })
-    },[])
+        // setuserId(props.id);
+    }, [])
 
-    const id= props.id;
-const navigate=useNavigate();
+    const navigate = useNavigate();
 
-    const Logout=()=>{
-        navigate("/login")
+    const Logout = () => {
+        navigate("/")
 
     }
 
@@ -28,10 +37,11 @@ const navigate=useNavigate();
             <div className="navbar">
                 <div className="navbar-content">
 
-                    <div className="navbar-img">
+                        <div className="navbar-img">
 
-                        <img src="../Images/assets/bcompany.png" alt="err" />
-                    </div>
+                            <img src="/static/bcompany.png" alt="err" />
+                        </div>
+
                     <div className="search">
                         <nav className="navbar ">
 
@@ -42,8 +52,8 @@ const navigate=useNavigate();
                     </div>
                     <div className="btn">
 
-                        <NavLink to={`/edit/${id}`}><button> <span>Manage_account</span> </button></NavLink>
-                        <NavLink to={`/cart/${id}`}><button>Shoping_cart</button></NavLink>
+                        <NavLink to={`/edit/${uid}`}><button> <span>Manage_account</span> </button></NavLink>
+                        <NavLink to={`/cart/${uid}/${pid}`}><button>Shoping_cart</button></NavLink>
                         <div className="btn_count" >
                             <span >{data.length}</span>
                         </div>

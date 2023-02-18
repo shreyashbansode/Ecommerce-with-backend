@@ -32,7 +32,7 @@ const SignUp = () => {
     axios.post("http://localhost:1031/", myobj)
       .then(() => {
         alert("register successful")
-        navigate("/login")
+        navigate("/")
 
       })
       .catch((error) => {
@@ -48,7 +48,7 @@ const SignUp = () => {
 
       <div className="signup d_grid">
         <div className="img">
-          <img src="./Images/assets/bcompany.png" alt="err" />
+          <img src="/static/bcompany.png" alt="err" />
         </div>
 
         <div className=" bx_center">
@@ -91,7 +91,7 @@ const SignUp = () => {
             </div>
             <div className="btns">
               <button type="submit" className="btn btn-light" >Register</button>
-              <NavLink to="/login"><button type="button" className="btn btn-secondary">Sign In</button></NavLink>
+              <NavLink to="/"><button type="button" className="btn btn-secondary">Sign In</button></NavLink>
             </div>
           </form>
         </div>

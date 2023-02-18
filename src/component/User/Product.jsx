@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
 
-const Product = () => {
+const Product = (props) => {
 
   const [productData, setproductData] = useState();
 
+  const uid = props.id;  // id are pass to product details
   const navigate = useNavigate();
 
   console.log(productData)
@@ -19,27 +20,32 @@ const Product = () => {
 
   }, [])
 
-  function Navigate() {
-    navigate("/pdetail")
+  // function Navigate() {
+  //   navigate(`/pdetail/${uid}/${}`)
 
-  }
+  // }
   return (
     <>
 
       <div className="product" >
         {productData?.map((row) => {
+          
+         props.setpid(row._id)
           return (
             <>
-              <div className="product-bx" onClick={Navigate}>
-                <div className="pr-img">
-                  <img src="./../images/products/2.jpg" alt="err" />
+              <NavLink to={`/pdetail/${uid}/${row._id}`}>
+
+                <div className="product-bx" >
+                  <div className="pr-img">
+                    <img src="/static/2.jpg" alt="err" />
+                  </div>
+                  <div className="pr-details">
+                    <h5>{row.Name}</h5>
+                    <h5>{row.Type}</h5>
+                    <h5>{row.Price}</h5>
+                  </div>
                 </div>
-                <div className="pr-details">
-                  <h5>{row.Name}</h5>
-                  <h5>{row.Type}</h5>
-                  <h5>{row.Price}</h5>
-                </div>
-              </div>
+              </NavLink>
 
             </>
           )

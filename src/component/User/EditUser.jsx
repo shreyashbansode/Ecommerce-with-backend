@@ -3,11 +3,13 @@ import { NavLink, useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import Footer from './../Footer/Footer'
+import NavBar from './NavBar'
 
 const EditUser = () => {
 
     const { id } = useParams()
 
+    // const[userId,setuserId]=
 
     const [firstName, setfirstName] = useState()
     const [lastName, setlastName] = useState()
@@ -43,7 +45,7 @@ const EditUser = () => {
         const myobj = {
             firstName,
             lastName,
-            Number,
+            mobNumber,
             email,
             password,
             Address,
@@ -65,10 +67,9 @@ const EditUser = () => {
 
     return (
         <>
-
             <div className="signup d_grid">
                 <div className="img">
-                    <img src="./Images/assets/bcompany.png" alt="err" />
+                    <img src="/static/bcompany.png" alt="err" />
                 </div>
 
                 <div className=" bx_center">
@@ -108,7 +109,7 @@ const EditUser = () => {
                     </form>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </>
     )
 }

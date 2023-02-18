@@ -48,7 +48,7 @@ const SellerDashboard = () => {
       <div className="seller-dash">
         <div className="seller-content">
           <div className="logo">
-            <img src="../../images/assets/bcompany.png" alt="err" />
+            <img src="/static/bcompany.png" alt="err" />
           </div>
           <div className="slider">
             <div className="slider-img">
@@ -69,7 +69,7 @@ const SellerDashboard = () => {
                   <>
                     <div className="product-bx">
                       <div className="pr-img">
-                        <img src="./../images/products/2.jpg" alt="err" />
+                        <img src="/static/2.jpg" alt="err" />
                       </div>
                       <div className="pr-details">
                         <h5>Name:{row.Name}</h5>

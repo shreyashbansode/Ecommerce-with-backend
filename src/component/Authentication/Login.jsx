@@ -63,7 +63,7 @@ const Login = () => {
 
             <div className="login_section d_grid">
                 <div className="img">
-                    <img src="./Images/assets/bcompany.png" alt="" />
+                    <img src="/static/bcompany.png" alt="" />
                 </div>
                 <div className="login_content">
                     <form onSubmit={loginHandler}>
